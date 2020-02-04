@@ -7,7 +7,7 @@ module.exports = {
 
     // Options reference: https://pm2.keymetrics.io/docs/usage/application-declaration/
     args: 'one two',
-    instances: max,
+    instances: 'max',
     autorestart: true,
     watch: false,
     max_memory_restart: '1G',
