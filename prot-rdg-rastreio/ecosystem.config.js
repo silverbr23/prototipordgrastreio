@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
     name: 'API',
-    script: 'app.js',
+    script: './app.js',
     wait_ready: true,
     listen_timeout: 3000,
 
@@ -10,7 +10,7 @@ module.exports = {
     instances: 'max',
     autorestart: true,
     watch: true,
-    max_memory_restart: '512M',
+    max_memory_restart: '256M',
     env: {
       NODE_ENV: 'development'
     },
