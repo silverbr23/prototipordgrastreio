@@ -1,11 +1,28 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+
+<!-- Form-->
+<div class="form">
+  <div class="form-toggle"></div>
+  <div class="form-panel one">
+    <div class="form-header text-center">
+      <img src="/images/pacote.svg" height="220" class="d-inline-block align-top icone-rastreio" fill="blue" alt="">
+      <h1>Rastreio de Pacotes</h1>
+    </div>
+    <div class="form-content">
+      <form>
+        <div class="form-group">
+          <label for="username">Usuário/CNPJ</label>
+          <input type="text" id="username" name="username" required="required"/>
+        </div>
+        <div class="form-group">
+          <label for="produto">Produto</label>
+          <input type="produto" id="produto" name="produto"/>
+        </div>
+        <div class="form-group">
+          <button type="submit">Rastrear</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="form-panel two">
+  </div>
+</div>

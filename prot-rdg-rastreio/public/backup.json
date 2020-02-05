@@ -1,0 +1,83 @@
+{
+    "data": [
+        {
+            "_idUser": "5e3a2d9dc8b9ca076eeba702",
+            "Pacotes": [
+                {
+                    "_id": "5e3a2d9df4a8fd18fff1c15b",
+                    "CODIGO": 0,
+                    "PRODUTO": "AÇO",
+                    "DESCRICAO": "820324e8-e17f-49a1-b0d6-457484d0138f",
+                    "STATUS": "Entregue",
+                    "U_DATA": "Friday, January 31, 2020 2:08 AM"
+                },
+                {
+                    "_id": "5e3a2d9d948b58b9987aef84",
+                    "CODIGO": 1,
+                    "PRODUTO": "PEDRA",
+                    "DESCRICAO": "4ced98c4-2593-4a87-ac01-03bbe5d0c5ca",
+                    "STATUS": "Despachado",
+                    "U_DATA": "Wednesday, January 8, 2020 10:02 PM"
+                }
+            ]
+        },
+        {
+            "_idUser": "5e3a2d9de009ea5a5c28783d",
+            "Pacotes": [
+                {
+                    "_id": "5e3a2d9d44070c865b76a59f",
+                    "CODIGO": 0,
+                    "PRODUTO": "BRITA",
+                    "DESCRICAO": "32959351-4085-4d7f-9146-cb3182e72e4d",
+                    "STATUS": "Despachado",
+                    "U_DATA": "Wednesday, January 22, 2020 8:59 AM"
+                },
+                {
+                    "_id": "5e3a2d9d6668efea197bd53c",
+                    "CODIGO": 1,
+                    "PRODUTO": "PEDRA",
+                    "DESCRICAO": "eb81947d-7216-4823-98ce-c3ed23ded220",
+                    "STATUS": "Entregue",
+                    "U_DATA": "Wednesday, January 22, 2020 1:01 PM"
+                },
+                {
+                    "_id": "5e3a2d9d8691dede482ec125",
+                    "CODIGO": 2,
+                    "PRODUTO": "AÇO",
+                    "DESCRICAO": "2551c66e-ffc3-40ac-95c5-ace0e46217ce",
+                    "STATUS": "Entregue",
+                    "U_DATA": "Friday, January 3, 2020 11:43 PM"
+                }
+            ]
+        },
+        {
+            "_idUser": "5e3a2d9daac1e07e9928d4a3",
+            "Pacotes": [
+                {
+                    "_id": "5e3a2d9de593aa327886bbec",
+                    "CODIGO": 0,
+                    "PRODUTO": "METAL",
+                    "DESCRICAO": "174d6535-1759-432f-a360-edb3b9011cda",
+                    "STATUS": "Despachado",
+                    "U_DATA": "Friday, January 3, 2020 8:56 PM"
+                },
+                {
+                    "_id": "5e3a2d9d34dd060ebaa438f5",
+                    "CODIGO": 1,
+                    "PRODUTO": "PEDRA",
+                    "DESCRICAO": "5bf64ad2-b371-4430-a1ca-d4cf6c8b249c",
+                    "STATUS": "Despachado",
+                    "U_DATA": "Monday, January 6, 2020 2:49 AM"
+                },
+                {
+                    "_id": "5e3a2d9d3733e50b0dedb5d4",
+                    "CODIGO": 2,
+                    "PRODUTO": "GRANITO",
+                    "DESCRICAO": "3e996822-1cad-47ab-989f-1f28732702b3",
+                    "STATUS": "Preparação",
+                    "U_DATA": "Thursday, January 9, 2020 10:52 AM"
+                }
+            ]
+        }
+    ]
+}
