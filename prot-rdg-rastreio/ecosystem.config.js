@@ -4,7 +4,7 @@ module.exports = {
     script: './app.js',
     wait_ready: true,
     listen_timeout: 3000,
-
+    exec_mode: 'cluster',
     // Options reference: https://pm2.keymetrics.io/docs/usage/application-declaration/
     args: 'one two',
     instances: 'max',
