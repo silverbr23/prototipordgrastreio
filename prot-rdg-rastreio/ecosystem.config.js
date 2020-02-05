@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
     name: 'API',
-    script: './app.js',
+    script: './bin/www',
     wait_ready: true,
     listen_timeout: 3000,
     exec_mode: 'cluster',
