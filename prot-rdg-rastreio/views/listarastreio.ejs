@@ -20,6 +20,7 @@
                         <th>STATUS: </th>
                         <th>U_DATA: </th>
                     </tr>
+                   
                 </thead>
             </table>
         </div>
@@ -215,18 +216,11 @@
 
     })(window, document);
     $(document).ready(function () {
-        let dataJ;
-        fetch('/backup.json')
-            .then(response => {
-                return response.json()
-            })
-            .then(data => {
-                dataJ = data.data.filter((a) => a._idUser == "5e3a2d9dc8b9ca076eeba702").map((a) => a.Pacotes)
-                dataJ = dataJ[0];
-
+       let data = `<%-dataJ%>`;
+       data = JSON.parse(data);
                 $('#datatable').dataTable({
                     "processing": true,
-                    "data": dataJ,
+                    "data": data,
                     "columns": [
                         { "data": "CODIGO" }, { "data": "PRODUTO" }, { "data": "DESCRICAO" }, { "data": "STATUS" }, { "data": "U_DATA" }
                     ],
@@ -247,9 +241,5 @@
                     bAutoWidth: true
                 });
 
-            })
-            .catch(err => {
-                // Do something for an error here
-            })
     });
 </script>
