@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('listarastreio');
 });
 
+router.get('/rastreio/', function(req, res, next) {
+  res.render('rastreio/rastreio');
+});
+
+
 module.exports = router;

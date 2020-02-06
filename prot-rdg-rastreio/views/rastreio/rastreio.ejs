@@ -1,0 +1,83 @@
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700' rel='stylesheet' type='text/css'>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="/stylesheets/timeline.css" rel="stylesheet">
+
+
+
+<div class="form-timeline">
+    <div class="form-panel one">
+        <ul class="timeline" id="timeline">
+            <li class="li st ">
+                <div class="timestamp">
+                    <img src="/images/st1.svg" class="d-inline-block align-top icone-rastreio-st" fill="blue" alt="">
+                    <span class="date">11/15/2014<span>
+                </div>
+                <div class="status">
+                    <h4> Preparando Pacote </h4>
+                </div>
+            </li>
+            <li class="li st ">
+                <div class="timestamp">
+                    <img src="/images/st2.svg" class="d-inline-block align-top icone-rastreio-st" fill="blue" alt="">
+                    <span class="date">11/15/2014<span>
+                </div>
+                <div class="status">
+                    <h4> Aguardando Despache </h4>
+                </div>
+            </li>
+            <li class="li st ">
+                <div class="timestamp">
+                    <img src="/images/st3.svg" class="d-inline-block align-top icone-rastreio-st" fill="blue" alt="">
+                    <span class="date">11/15/2014<span>
+                </div>
+                <div class="status">
+                    <h4> Pacote Enviado </h4>
+                </div>
+            </li>
+            <li class="li st ">
+                <div class="timestamp">
+                    <img src="/images/st4.svg" class="d-inline-block align-top icone-rastreio-st" fill="blue" alt="">
+                    <span class="date">TBD<span>
+                </div>
+                <div class="status">
+                    <h4> Pacote Entregue </h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="form-content">
+        <div class="form-group">
+            <button id="next">Próx.</button>
+            <button id="prev">Anterior</button>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    let prox = document.getElementById("next");
+    let prev = document.getElementById("prev");
+
+    function prevState() {
+        let states = document.querySelectorAll(".st");
+        let completes = document.querySelectorAll(".complete");
+        let lastComplete = completes[completes.length - 1];
+        lastComplete.classList.remove('complete');
+        lastComplete.classList.add('st');
+        // lastComplete = completes - 1;
+    }
+
+    prev.onclick = prevState;
+
+
+    function nextState() {
+        let states = document.querySelectorAll(".st");
+        let completes = document.querySelectorAll(".complete");
+        let lastComplete = states[0];
+        lastComplete.classList.add('complete');
+        lastComplete.classList.remove('st');
+        // lastComplete = completes + 1;
+    }
+
+    next.onclick = nextState;
+</script>

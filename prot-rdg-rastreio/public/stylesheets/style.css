@@ -43,13 +43,26 @@ html {
   z-index: 15;
   position: relative;
   background: #FFFFFF;
-  width: 600px;
+  width: 500px;
   border-radius: 4px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
-  margin: 100px auto 10px;
+  margin: 40px auto 10px;
   overflow: hidden;
 }
+
+.form-timeline {
+  z-index: 15;
+  position: relative;
+  background: #FFFFFF;
+  width: 70%;
+  border-radius: 4px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  margin: 40px auto 10px;
+  overflow: hidden;
+}
+
 .form-toggle {
   z-index: 10;
   position: absolute;
@@ -276,6 +289,18 @@ html {
   margin: 0 5px;
   vertical-align: middle;
   font-size: 12px;
+}
+
+.icone-rastreio{
+  height: 20vh; 
+}
+
+.icone-rastreio-st{
+  height: 5vh; 
+}
+
+.icone-rastreio-st:before{
+
 }
 
 .cp-fab {
@@ -520,4 +545,95 @@ div.material-table table td:first-child {
 div.material-table table th:last-child,
 div.material-table table td:last-child {
   padding: 0 14px 0 0;
+}
+/*////////////////////////////////////////*/
+
+.timeline {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.li {
+  transition: all 200ms ease-in;
+}
+
+.timestamp {
+  margin-bottom: 20px;
+  padding: 0px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 100;
+}
+
+.status {
+  padding: 0px 40px;
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #D6DCE0;
+  position: relative;
+  transition: all 200ms ease-in;
+}
+.status h4 {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: medium;
+}
+
+
+.status:before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: -15px;
+  left: 42%;
+  transition: all 200ms ease-in;
+}
+
+.li.complete .status {
+  border-top: 2px solid #66DC71;
+}
+.li.complete .status:before {
+  background-color: #66DC71;
+  border: none;
+  transition: all 200ms ease-in;
+}
+.li.complete .status h4 {
+  color: #66DC71;
+}
+
+@media (min-device-width: 320px) and (max-device-width: 700px) {
+  .timeline {
+    list-style-type: none;
+    display: block;
+  }
+
+  .li {
+    transition: all 200ms ease-in;
+    display: flex;
+    width: inherit;
+  }
+
+  .timestamp {
+    width: 100px;
+  }
+
+  .status:before {
+    left: -8%;
+    top: 30%;
+    transition: all 200ms ease-in;
+  }
+}
+
+#toggleButton {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  background-color: #75C7F6;
 }
