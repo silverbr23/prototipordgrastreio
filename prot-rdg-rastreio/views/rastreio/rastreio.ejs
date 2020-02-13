@@ -6,11 +6,12 @@
 
 <div class="form-timeline">
     <div class="form-panel one">
+        <ul class="lead"><strong>Status do pacote <%=data.CODIGO%> - <%=data.PRODUTO%></strong></ul>
         <ul class="timeline" id="timeline">
             <li class="li st ">
                 <div class="timestamp">
                     <img src="/images/st1.svg" class="d-inline-block align-top icone-rastreio-st" fill="blue" alt="">
-                    <span class="date">11/15/2014<span>
+                    <span class="date"><%=data.U_DATA%><span>
                 </div>
                 <div class="status">
                     <h4> Preparando Pacote </h4>
@@ -19,7 +20,7 @@
             <li class="li st ">
                 <div class="timestamp">
                     <img src="/images/st2.svg" class="d-inline-block align-top icone-rastreio-st" fill="blue" alt="">
-                    <span class="date">11/15/2014<span>
+                    <span class="date"><%=data.U_DATA%><span>
                 </div>
                 <div class="status">
                     <h4> Aguardando Despache </h4>
@@ -28,7 +29,7 @@
             <li class="li st ">
                 <div class="timestamp">
                     <img src="/images/st3.svg" class="d-inline-block align-top icone-rastreio-st" fill="blue" alt="">
-                    <span class="date">11/15/2014<span>
+                    <span class="date"><%=data.U_DATA%><span>
                 </div>
                 <div class="status">
                     <h4> Pacote Enviado </h4>
@@ -37,7 +38,7 @@
             <li class="li st ">
                 <div class="timestamp">
                     <img src="/images/st4.svg" class="d-inline-block align-top icone-rastreio-st" fill="blue" alt="">
-                    <span class="date">TBD<span>
+                    <span class="date"><%=data.U_DATA%><span>
                 </div>
                 <div class="status">
                     <h4> Pacote Entregue </h4>
@@ -45,18 +46,37 @@
             </li>
         </ul>
     </div>
-    <div class="form-content">
+    <!-- <div class="form-content">
         <div class="form-group">
             <button id="next">Próx.</button>
             <button id="prev">Anterior</button>
         </div>
-    </div>
+    </div> -->
 </div>
 
 <script type="text/javascript">
 
     let prox = document.getElementById("next");
     let prev = document.getElementById("prev");
+
+    $(document).ready(function () {
+        let data = `<%=data.STATUS%>`;
+        switch (data) {
+            case "Entregue":
+                Array(4).fill(1).map((a) => nextState());
+                break;
+            case "Despachado":
+                Array(2).fill(1).map((a) => nextState());
+                break;
+            case "Preparação":
+                Array(1).fill(1).map((a) => nextState());
+                break;
+            case "Enviado":
+                Array(3).fill(1).map((a) => nextState());
+                break;
+            default:
+        }
+    });
 
     function prevState() {
         let states = document.querySelectorAll(".st");
@@ -67,7 +87,7 @@
         // lastComplete = completes - 1;
     }
 
-    prev.onclick = prevState;
+    // prev.onclick = prevState;
 
 
     function nextState() {
@@ -79,5 +99,8 @@
         // lastComplete = completes + 1;
     }
 
-    next.onclick = nextState;
+    // next.onclick = nextState;
+
+
+
 </script>

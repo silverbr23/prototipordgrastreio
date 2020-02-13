@@ -50,12 +50,16 @@ html {
   margin: 40px auto 10px;
   overflow: hidden;
 }
-
+nav, .navbar{
+  
+  width: 100% !important;
+}
 .form-timeline {
   z-index: 15;
   position: relative;
   background: #FFFFFF;
-  width: 70%;
+  max-width: 80%;
+ 
   border-radius: 4px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
@@ -559,6 +563,10 @@ div.material-table table td:last-child {
   transition: all 200ms ease-in;
 }
 
+.li > .timestamp > span{
+  min-width: 90px;
+}
+
 .timestamp {
   margin-bottom: 20px;
   padding: 0px 40px;
@@ -612,7 +620,15 @@ div.material-table table td:last-child {
   .timeline {
     list-style-type: none;
     display: block;
+    padding-right: 30px;
   }
+
+ .form-panel.one{
+   padding-top: 20px;
+   padding-left: 0;
+   padding-right: 0;
+
+ }
 
   .li {
     transition: all 200ms ease-in;
@@ -629,6 +645,22 @@ div.material-table table td:last-child {
     top: 30%;
     transition: all 200ms ease-in;
   }
+
+
+  .li.complete .status {
+    border-left: 2px solid #66DC71;
+    border-top: 0px;
+  }
+  .li.complete .status:before {
+    background-color: #66DC71;
+    border: none;
+    transition: all 200ms ease-in;
+  }
+  .li.complete .status h4 {
+    color: #66DC71;
+  }
+
+
 }
 
 #toggleButton {
@@ -637,3 +669,4 @@ div.material-table table td:last-child {
   top: 20px;
   background-color: #75C7F6;
 }
+
