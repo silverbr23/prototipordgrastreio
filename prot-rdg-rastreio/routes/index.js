@@ -28,7 +28,7 @@ router.get('/teste', function (req, res, next) {
    "idUser": "123",
    "Pedido": "321"
   }
-  
+  debugger;
   fetch(url,{method: 'POST', headers: headers, body:data})
     .then(response => response.json())
     .then(data => {

@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "startD": "pm2-runtime start ecosystem.config.js --env development",
-    "start": "pm2-runtime start ecosystem.config.js --env production",
-    "start-pm2": "pm2 start ./bin/www"
+    "start:dev": "pm2-runtime start ecosystem.config.js --only AppDev",
+    "start": "pm2-runtime start ecosystem.config.js --only AppProd"   
   },
   "dependencies": {
     "body-parser": "^1.19.0",
