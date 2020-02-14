@@ -15,6 +15,7 @@ a {
 html {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .odd{
@@ -614,6 +615,20 @@ div.material-table table td:last-child {
 }
 .li.complete .status h4 {
   color: #66DC71;
+}
+.card.not-found{
+  z-index: 15;
+  position: relative;
+  background: #FFFFFF;
+  width: 500px;
+  border-radius: 4px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+  margin: 40px auto 10px;
+  overflow: hidden;
+  padding: 20px 30px;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
 @media (min-device-width: 320px) and (max-device-width: 700px) {

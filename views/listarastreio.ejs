@@ -1,12 +1,9 @@
-
 <div class="row">
     <div id="admin" class="col s12">
         <div class="card material-table">
             <div class="table-header">
                 <span class="table-title">Tabela de Rastreios</span>
                 <div class="actions">
-                    <a href="#add_users" class="modal-trigger waves-effect btn-flat nopadding"><i
-                            class="material-icons">person_add</i></a>
                     <a href="#" class="search-toggle waves-effect btn-flat nopadding"><i
                             class="material-icons">search</i></a>
                 </div>
@@ -14,13 +11,14 @@
             <table id="datatable">
                 <thead>
                     <tr>
-                        <th>CÓDIGO: </th>
-                        <th>PRODUTO: </th>
-                        <th>DESCRICAO: </th>
-                        <th>STATUS: </th>
-                        <th>U_DATA: </th>
+                        <th>Código: </th>
+                        <th>Produto: </th>
+                        <th>Descrição: </th>
+                        <th>Status: </th>
+                        <th>Últ. Atualização: </th>
+                        <th>Ações: </th>
                     </tr>
-                   
+
                 </thead>
             </table>
         </div>
@@ -216,30 +214,31 @@
 
     })(window, document);
     $(document).ready(function () {
-       let data = `<%-dataJ%>`;
-       data = JSON.parse(data);
-                $('#datatable').dataTable({
-                    "processing": true,
-                    "data": data,
-                    "columns": [
-                        { "data": "CODIGO" }, { "data": "PRODUTO" }, { "data": "DESCRICAO" }, { "data": "STATUS" }, { "data": "U_DATA" }
-                    ],
-                    "oLanguage": {
-                        "sStripClasses": "",
-                        "sSearch": "",
-                        "sSearchPlaceholder": "Enter any keyword here to filter...",
-                        "sInfo": "_START_ -_END_ of _TOTAL_",
-                        "sLengthMenu": '<span>Rows per page:</span><select class="browser-default">' +
-                            '<option value="10">10</option>' +
-                            '<option value="20">20</option>' +
-                            '<option value="30">30</option>' +
-                            '<option value="40">40</option>' +
-                            '<option value="50">50</option>' +
-                            '<option value="-1">All</option>' +
-                            '</select></div>'
-                    },
-                    bAutoWidth: true
-                });
+        let data = `<%-dataJ%>`;
+        data = JSON.parse(data);
+
+        $('#datatable').dataTable({
+            "processing": true,
+            "data": data,
+            "columns": [
+                { "data": "CODIGO" }, { "data": "PRODUTO" }, { "data": "DESCRICAO" }, { "data": "STATUS" }, { "data": "U_DATA" }, { "data": "ACAO"}
+            ],
+            "oLanguage": {
+                "sStripClasses": "",
+                "sSearch": "",
+                "sSearchPlaceholder": "Enter any keyword here to filter...",
+                "sInfo": "_START_ -_END_ of _TOTAL_",
+                "sLengthMenu": '<span>Rows per page:</span><select class="browser-default">' +
+                    '<option value="10">10</option>' +
+                    '<option value="20">20</option>' +
+                    '<option value="30">30</option>' +
+                    '<option value="40">40</option>' +
+                    '<option value="50">50</option>' +
+                    '<option value="-1">All</option>' +
+                    '</select></div>'
+            },
+            bAutoWidth: true
+        });
 
     });
 </script>

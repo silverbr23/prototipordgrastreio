@@ -1,5 +1,5 @@
 {
-    "url": "http: //sapgrcdev.campo.local:51000/RESTAdapter/proc",
+    "url": "http://sapgrcdev.campo.local:51000/RESTAdapter/proc",
     "headers": {
         "Authorization": "Basic YmFzaXM6bWVnYUAxMjM=",
         "Content-Type": "text/plain"
