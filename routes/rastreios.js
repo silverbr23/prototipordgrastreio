@@ -1,8 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const fetch = require('node-fetch');
-const cf = '/config/.configs';
-
+const cf = require('../config/.configs');
 /* GET users listing. */
 router.get('/', function (req, res, next) {
   fetch(cf.url, { method: 'POST', headers: cf.headers, body: cf.data })
