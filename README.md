@@ -18,4 +18,4 @@ Os passos e requisitos para execução são os seguintes.
  ``
  - após clonar mova para a pasta com o comando:  ``cd ./prototipordgrastreio/``
  - Agora execute um: ``npm install ``  aguarde até que a instalação esteja concluída.
- - Por fim para executar utilize o comando ``npm run startD``
+ - Por fim para executar utilize o comando ``npm run start:dev``
