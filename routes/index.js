@@ -1,35 +1,26 @@
+const cf = require('../config/.configs');
 const express = require('express');
 const router = express.Router();
 const fetch = require('node-fetch');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
+
   res.render('index', { title: 'Express' });
 });
 
 router.post('/', function (req, res, next) {
+  if (req.body.codProduto.length > 0 || req.body.codUsuario.length > 0) {
+    if (!req.body.codProduto)
+      return res.redirect(`rastreios?codUsuario=${req.body.codUsuario}`);
+    return res.redirect(`/rastreios/rastreio?codProduto=${req.body.codProduto}`)
+  }
 
-  if (!req.body.codProduto)
-    res.redirect(`rastreios?codUsuario=${req.body.codUsuario}`);
-
-  res.redirect(`/rastreios/rastreio?codProduto=${req.body.codProduto}`)
-
+  return res.redirect('/');
 });
 
 router.get('/teste', function (req, res, next) {
-  let url = 'http://sapgrcdev.campo.local:51000/RESTAdapter/proc';
-  let auth = Buffer.from('basis:mega@123').toString('base64');
-  console.log(auth);
-  let headers = {
-    "Authorization": `Basic ${auth}`,
-    "Content-Type": "text/plain"
-  }
-  let data = {
-   "idUser": "123",
-   "Pedido": "321"
-  }
-  debugger;
-  fetch(url,{method: 'POST', headers: headers, body:data})
+  fetch(cf.url, { method: 'POST', headers: cf.headers, body: cf.data })
     .then(response => response.json())
     .then(data => {
       res.json(data)
