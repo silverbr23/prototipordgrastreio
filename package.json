@@ -16,7 +16,7 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "newrelic": "^6.3.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "path": "^0.12.7",
     "pm2": "^4.2.3",
     "require-dir-all": "^0.4.15"
